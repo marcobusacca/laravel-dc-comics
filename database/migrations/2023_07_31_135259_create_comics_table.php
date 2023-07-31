@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('thumb');
             $table->string('cover_image');
             $table->string('thumb2');
-            $table->double('price', 4, 2);
+            $table->string('price');
             $table->string('series');
             $table->date('sale_date');
             $table->string('type');
