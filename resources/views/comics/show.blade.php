@@ -18,7 +18,7 @@
                         <div class="row">
                             <!-- Image -->
                             <div class="col-12 col-lg-4 d-flex justify-content-center">
-                                <img src="{{ $comic->thumb }}" alt="banner-image" class="border border-black border-5">
+                                <img src="{{ $comic->thumb }}" alt="banner-image" class="img-fluid border border-black border-5">
                             </div>
                             <!-- Details -->
                             <div class="col-12 col-lg-8 d-flex flex-wrap align-items-center">
