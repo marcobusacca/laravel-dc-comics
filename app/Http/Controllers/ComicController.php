@@ -40,17 +40,22 @@ class ComicController extends Controller
 
         $comic = new Comic();
 
-        $comic->title = $form_data['title'];
-        $comic->description = $form_data['description'];
-        $comic->thumb = $form_data['thumb'];
-        $comic->cover_image = $form_data['cover_image'];
-        $comic->thumb2 = $form_data['thumb2'];
-        $comic->price = $form_data['price'];
-        $comic->series = $form_data['series'];
-        $comic->sale_date = $form_data['sale_date'];
-        $comic->type = $form_data['type'];
-        $comic->artists = $form_data['artists'];
-        $comic->writers = $form_data['writers'];
+        // SENZA FILLABLE
+
+        // $comic->title = $form_data['title'];
+        // $comic->description = $form_data['description'];
+        // $comic->thumb = $form_data['thumb'];
+        // $comic->cover_image = $form_data['cover_image'];
+        // $comic->thumb2 = $form_data['thumb2'];
+        // $comic->price = $form_data['price'];
+        // $comic->series = $form_data['series'];
+        // $comic->sale_date = $form_data['sale_date'];
+        // $comic->type = $form_data['type'];
+        // $comic->artists = $form_data['artists'];
+        // $comic->writers = $form_data['writers'];
+
+        // CON FILLABLE
+        $comic->fill($form_data);
 
         $comic->save();
 
