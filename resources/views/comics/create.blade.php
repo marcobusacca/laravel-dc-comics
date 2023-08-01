@@ -9,7 +9,18 @@
                     <a href="{{ Route('comics.index') }}" class="btn btn-dark">Homepage</a>
                 </div>
             </div>
-            <div class="col-12 my-5">
+            <div class="col-12 mt-5">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </div>
+            <div class="col-12 mb-5">
                 <form action=" {{ Route('comics.store') }} " method="POST">
                     @csrf
                     <div class="form-group border p-4">
