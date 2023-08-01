@@ -119,6 +119,8 @@ class ComicController extends Controller
     private function validation($data)
     {
         $validator = Validator::make($data,
+        
+            // PARAMETRI DI VALIDAZIONE
             [
                 'title'         =>  'required|max:50',
                 'description'   =>  'required',
@@ -132,8 +134,35 @@ class ComicController extends Controller
                 'artists'       =>  'required',
                 'writers'       =>  'required',
             ],
+
+            // MESSAGGI DI ERRORE
             [
-                // GESTIONE MESSAGGI DI ERRORE
+                'title.required'        =>  'Il titolo è obbligatorio',
+                'title.max'             =>  'Il titolo deve avere una lunghezza massima di :max caratteri',
+
+                'description.required'  =>  'La descrizione è obbligatoria',
+
+                'thumb.required'        =>  'La copertina è obbligatoria',
+
+                'cover_image.required'  =>  'La cover image è obbligatoria',
+
+                'thumb2.required'       =>  'La seconda copertina è obbligatoria',
+
+                'price.required'        =>  'Il prezzo è obbligatorio',
+                'price.max'             =>  'Il prezzo deve avere una lunghezza massima di :max caratteri',
+
+                'series.required'       =>  'La serie è obbligatoria',
+                'series.max'            =>  'La serie deve avere una lunghezza massima di :max caratteri',
+
+                'sale_date.required'    =>  'La data di uscita è obbligatoria',
+                'sale_date.max'         =>  'La data di uscita deve avere una lunghezza massima di :max caratteri',
+
+                'type.required'         =>  'La tipologia è obbligatoria',
+                'type.max'              =>  'La tipologia deve avere una lunghezza massima di :max caratteri',
+
+                'artists.required'      =>  'Gli artisti sono obbligatori',
+
+                'writers.required'      =>  'Gli scrittori sono obbligatori',
             ]
         
         )->validate();
