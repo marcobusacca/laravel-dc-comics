@@ -51,7 +51,7 @@
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
                                 <!-- Delete Button -->
-                                <form action="{{ Route('comics.destroy', $comic) }}" method="POST" class="d-inline-block">
+                                <form action="{{ Route('comics.destroy', $comic) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare questo elemento?')" class="d-inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger mx-2">
