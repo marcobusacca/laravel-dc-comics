@@ -19,6 +19,19 @@ class ComicController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Comic  $comic
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $comic = Comic::findOrFail($id);
+
+        return view('comics.show', compact('comic'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -41,7 +54,6 @@ class ComicController extends Controller
         $comic = new Comic();
 
         // SENZA FILLABLE
-
         // $comic->title = $form_data['title'];
         // $comic->description = $form_data['description'];
         // $comic->thumb = $form_data['thumb'];
@@ -60,19 +72,6 @@ class ComicController extends Controller
         $comic->save();
 
         return redirect()->route('comics.show', $comic->id);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Comic  $comic
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $comic = Comic::findOrFail($id);
-
-        return view('comics.show', compact('comic'));
     }
 
     /**
