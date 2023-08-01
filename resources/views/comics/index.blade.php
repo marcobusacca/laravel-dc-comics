@@ -39,10 +39,21 @@
                                     <strong>Sale Date:</strong>
                                     <span>{{ $comic->sale_date }}</span>
                                 </div>
-                                <!-- More Info Button -->
-                                <div>
-                                    <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary">More Info</a>
-                                </div>
+                            </div>
+                            <!-- Card Footer -->
+                            <div class="card-footer text-center">
+                                <!-- Show Button -->
+                                <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary mx-1">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <!-- Edit Button -->
+                                <a href="#" class="btn btn-warning mx-1">
+                                    <i class="fa-solid fa-edit"></i>
+                                </a>
+                                <!-- Delete Button -->
+                                <a href="#" class="btn btn-danger mx-1">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
