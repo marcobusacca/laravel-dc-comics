@@ -41,17 +41,17 @@
                                 </div>
                             </div>
                             <!-- Card Footer -->
-                            <div class="card-footer text-center">
+                            <div class="card-footer d-flex justify-content-center align-items-center">
                                 <!-- Show Button -->
-                                <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary mx-1">
+                                <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary mx-2">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
                                 <!-- Edit Button -->
-                                <a href="#" class="btn btn-warning mx-1">
+                                <a href="#" class="btn btn-warning mx-2">
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
                                 <!-- Delete Button -->
-                                <a href="#" class="btn btn-danger mx-1">
+                                <a href="#" class="btn btn-danger mx-2">
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
                             </div>
