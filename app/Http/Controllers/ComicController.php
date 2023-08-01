@@ -50,7 +50,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $form_data = $request->all();
+        $form_data = $this->validation($request->all());
 
         $comic = new Comic();
 
@@ -95,7 +95,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $form_data = $request->all();
+        $form_data = $this->validation($request->all());
 
         $comic->update($form_data);
 
