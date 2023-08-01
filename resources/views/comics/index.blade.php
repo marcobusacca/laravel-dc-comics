@@ -51,9 +51,13 @@
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
                                 <!-- Delete Button -->
-                                <a href="#" class="btn btn-danger mx-2">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
+                                <form action="{{ Route('comics.destroy', $comic) }}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger mx-2">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
