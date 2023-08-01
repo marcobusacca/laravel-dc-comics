@@ -47,7 +47,7 @@
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
                                 <!-- Edit Button -->
-                                <a href="#" class="btn btn-warning mx-2">
+                                <a href="{{ Route('comics.edit', $comic) }}" class="btn btn-warning mx-2">
                                     <i class="fa-solid fa-edit"></i>
                                 </a>
                                 <!-- Delete Button -->
