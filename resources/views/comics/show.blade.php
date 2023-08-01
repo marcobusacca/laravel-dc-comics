@@ -46,6 +46,17 @@
                                 <hr>
                                 <p>{{ $comic->writers }}</p>
                             </div>
+                            <!-- Action Button -->
+                            <div class="col-12 text-center py-3">
+                                <!-- Edit Button -->
+                                <a href="{{ Route('comics.edit', $comic) }}" class="btn btn-warning mx-2">
+                                    <i class="fa-solid fa-edit"></i>
+                                </a>
+                                <!-- Delete Button -->
+                                <a href="#" class="btn btn-danger mx-2">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
